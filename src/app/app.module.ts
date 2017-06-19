@@ -1,13 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FeedsComponent} from './feeds/feeds.component';
 import {LeadsComponent} from './leads/leads.component';
 import {AccountsComponent} from './accounts/accounts.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { AuthComponent } from './auth/auth.component';
+import {ContactsComponent} from './contacts/contacts.component';
+import {AuthComponent} from './auth/auth.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +24,7 @@ import { AuthComponent } from './auth/auth.component';
     imports: [
         BrowserModule, AppRoutingModule
     ],
-    providers: [],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
 export class AppModule {
