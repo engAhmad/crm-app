@@ -10,16 +10,29 @@ import {LeadsComponent} from './leads/leads.component';
 import {AccountsComponent} from './accounts/accounts.component';
 import {ContactsComponent} from './contacts/contacts.component';
 import {AuthComponent} from './auth/auth.component';
+// template
+import {HeaderComponent} from './layout/header/header.component';
+import {TopbarComponent} from './layout/topbar/topbar.component';
+import {NavbarComponent} from './layout/navbar/navbar.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {BreadcrumbsComponent} from './layout/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
     declarations: [
         AppComponent,
+        HeaderComponent,
         HomeComponent,
         FeedsComponent,
         LeadsComponent,
         AccountsComponent,
         ContactsComponent,
         AuthComponent,
+        TopbarComponent,
+        NavbarComponent,
+        FooterComponent,
+        BreadcrumbsComponent
+
+
     ],
     imports: [
         BrowserModule, AppRoutingModule
