@@ -65,8 +65,6 @@ hr {
     border-top: 1px solid #CFD8DC;
 }
 
-
-
 .padding-left-0 {
     padding-left: 0 !important;
 }
@@ -97,7 +95,6 @@ hr {
     box-shadow: 0px 0px 5px #78909C;
     border-top: 1px solid #90A4AE;
 }
-
 
 .footer-v1 .footer-socials li a {
     color: #fff;
@@ -137,7 +134,6 @@ hr {
         width: 74.4%;
     }
 }
-
 
 .header {
     border-bottom: solid 2px #CFD8DC;
@@ -294,5 +290,16 @@ td > a:hover {
 .header .topbar ul.loginbar li i.fa {
     color: #d82e35;
 }
+/*Navbar Menu*/
+.header .navbar-nav > li > a {
+    font-size: 13px;
+}
+.header .topbar ul.loginbar {
+    font-size: 11px;
+}
+.header .topbar ul.loginbar  a {
+   color:#7c8082;
+}
+
 
 /************* end info bar *************/

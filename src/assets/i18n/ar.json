@@ -1,10 +1,16 @@
 {
-  "HOME": "Home",
-  "FEEDS": "Feeds",
-  "LEADS": "Leads",
-  "ACCOUNTS": "Accounts",
-  "CONTACTS": "Contacts",
-  "DEALS": "Deals",
-  "ACTIVITIES": "Activities",
-  "REPORTS": "Reports"
+  "CRM": "نظام ادارة العملاء",
+  "HOME": "الرئيسية",
+  "FEEDS": "السجل",
+  "LEADS": "العملاء",
+  "ACCOUNTS": "الحسابات",
+  "CONTACTS": "جهات الاتصال",
+  "DEALS": "الصفقات",
+  "ACTIVITIES": "النشاطات",
+  "REPORTS": "التقارير",
+  "COPYRIGHT": "جميع الحقوق محفوظة",
+  "LOGIN": "تسجيل الدخول",
+  "LOGOUT": "خروج",
+  "EMAIL": "البريد الالكتروني",
+  "PASSWORD": "كلمة المرور"
 }
