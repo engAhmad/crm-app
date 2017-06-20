@@ -31,8 +31,6 @@ import {BreadcrumbsComponent} from './layout/breadcrumbs/breadcrumbs.component';
         NavbarComponent,
         FooterComponent,
         BreadcrumbsComponent
-
-
     ],
     imports: [
         BrowserModule, AppRoutingModule
