@@ -5,9 +5,11 @@ import {FeedsComponent} from './feeds/feeds.component';
 import {LeadsComponent} from './leads/leads.component';
 import {AccountsComponent} from './accounts/accounts.component';
 import {ContactsComponent} from './contacts/contacts.component';
+import {LoginComponent} from "./auth/login/login.component";
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {path: 'login', component: LoginComponent},
     {path: 'home', component: HomeComponent},
     {path: 'feeds', component: FeedsComponent},
     {path: 'leads', component: LeadsComponent},

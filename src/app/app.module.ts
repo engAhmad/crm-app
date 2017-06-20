@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import {HttpModule, Http} from '@angular/http';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 // translating
@@ -13,14 +14,15 @@ import {FeedsComponent} from './feeds/feeds.component';
 import {LeadsComponent} from './leads/leads.component';
 import {AccountsComponent} from './accounts/accounts.component';
 import {ContactsComponent} from './contacts/contacts.component';
-import {AuthComponent} from './auth/auth.component';
+import {LoginComponent} from './auth/login/login.component';
 // template
 import {HeaderComponent} from './layout/header/header.component';
 import {TopbarComponent} from './layout/topbar/topbar.component';
 import {NavbarComponent} from './layout/navbar/navbar.component';
 import {FooterComponent} from './layout/footer/footer.component';
 import {BreadcrumbsComponent} from './layout/breadcrumbs/breadcrumbs.component';
-
+//services
+import {AuthService} from "./services/auth.service";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
@@ -28,6 +30,7 @@ export function HttpLoaderFactory(http: Http) {
 
 @NgModule({
     declarations: [
+        LoginComponent,
         AppComponent,
         HeaderComponent,
         HomeComponent,
@@ -35,14 +38,13 @@ export function HttpLoaderFactory(http: Http) {
         LeadsComponent,
         AccountsComponent,
         ContactsComponent,
-        AuthComponent,
         TopbarComponent,
         NavbarComponent,
         FooterComponent,
         BreadcrumbsComponent
     ],
     imports: [
-        BrowserModule, AppRoutingModule, HttpModule, TranslateModule.forRoot({
+        BrowserModule, FormsModule, AppRoutingModule, HttpModule, TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
@@ -50,7 +52,7 @@ export function HttpLoaderFactory(http: Http) {
             }
         })
     ],
-    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+    providers: [AuthService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
 export class AppModule {
