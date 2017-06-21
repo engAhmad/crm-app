@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html dir="rtl" lang="en"> <!--<![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html dir="rtl" lang="en"> <!--<![endif]-->
 <head>
-    <title>Customer relationship management (SPA)</title>
+    <title>{{appTitle}}</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +24,6 @@
     <!-- CSS Header and Footer -->
     <link rel="stylesheet" href="assets/css/css-rtl/headers/header-default-rtl.css">
     <link rel="stylesheet" href="assets/css/css-rtl/footers/footer-v1-rtl.css">
-
-
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="assets/plugins/animate.css">
     <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
@@ -39,7 +40,6 @@
     <base href="/">
     <app-root></app-root>
 </div>
-
 <!-- JS Global Compulsory -->
 <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
@@ -51,7 +51,7 @@
 <!-- JS Page Level -->
 <script type="text/javascript" src="assets/js/app.js"></script>
 <script type="text/javascript">
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function () {
         App.init();
     });
 </script>

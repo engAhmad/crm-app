@@ -48,7 +48,7 @@ form {
 
 .header .logo img {
     z-index: 1;
-    margin-bottom: -11px;
+    margin-bottom: -13px;
     margin-top: 8px;
     position: relative;
 }
@@ -131,7 +131,6 @@ hr {
     .header .mega-menu .nav {
         width: 74.4%;
     }
-}
 
 .header {
     border-bottom: solid 2px #CFD8DC;
@@ -288,16 +287,18 @@ td > a:hover {
 .header .topbar ul.loginbar li i.fa {
     color: #d82e35;
 }
+
 /*Navbar Menu*/
 .header .navbar-nav > li > a {
     font-size: 13px;
 }
+
 .header .topbar ul.loginbar {
     font-size: 11px;
 }
-.header .topbar ul.loginbar  a {
-   color:#7c8082;
-}
 
+.header .topbar ul.loginbar a {
+    color: #7c8082;
+}
 
 /************* end info bar *************/

@@ -1,5 +1,6 @@
 {
-  "CRM": "Customer relationship management",
+  "STO": "STO International",
+  "APP_TITLE": "Customer relationship management",
   "HOME": "Home",
   "FEEDS": "Feeds",
   "LEADS": "Leads",
@@ -8,15 +9,15 @@
   "DEALS": "Deals",
   "ACTIVITIES": "Activities",
   "REPORTS": "Reports",
-  "COPYRIGHT": "all right reserved",
+  "COPYRIGHT": "ALL Rights Reserved.",
   "LOGIN": "Login",
   "LOGOUT": "Logout",
   "EMAIL": "Email",
   "PASSWORD": "Password",
   "USERS": "Users",
-  "FORGOT_YOUR_PASSWORD":"Forgot your password ?",
-  "CLICK_HERE":"Click here",
-  "TO_RESET_YOUR_PASSWORD":"To reset your password .",
-  "LOGIN_TO_YOUR_ACCOUNT":"Login to your account",
-  "STAY_SIGNED_IN":"Stay signed in"
+  "FORGOT_YOUR_PASSWORD": "Forgot your password ?",
+  "CLICK_HERE": "Click here",
+  "TO_RESET_YOUR_PASSWORD": "To reset your password .",
+  "LOGIN_TO_YOUR_ACCOUNT": "Login to your account",
+  "STAY_SIGNED_IN": "Stay signed in"
 }
