@@ -13,5 +13,10 @@
   "LOGOUT": "تسجيل خروج",
   "EMAIL": "البريد الالكتروني",
   "PASSWORD": "كلمة المرور",
-  "USERS": "المستخدمين"
+  "USERS": "المستخدمين",
+  "FORGOT_YOUR_PASSWORD":"نسيت كلمة المرور ؟",
+  "CLICK_HERE":"اضغط هنا",
+  "TO_RESET_YOUR_PASSWORD":"لإعادة تعيين كلمة المرور .",
+  "LOGIN_TO_YOUR_ACCOUNT":"تسجيل الدخول إلى حسابك",
+  "STAY_SIGNED_IN":"البقاء متصل"
 }

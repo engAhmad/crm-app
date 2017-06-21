@@ -1,4 +1,22 @@
 {
-  "HELLO": "Hello",
-  "HOME": "Home"
+  "CRM": "Customer relationship management",
+  "HOME": "Home",
+  "FEEDS": "Feeds",
+  "LEADS": "Leads",
+  "ACCOUNTS": "Accounts",
+  "CONTACTS": "Contacts",
+  "DEALS": "Deals",
+  "ACTIVITIES": "Activities",
+  "REPORTS": "Reports",
+  "COPYRIGHT": "all right reserved",
+  "LOGIN": "Login",
+  "LOGOUT": "Logout",
+  "EMAIL": "Email",
+  "PASSWORD": "Password",
+  "USERS": "Users",
+  "FORGOT_YOUR_PASSWORD":"Forgot your password ?",
+  "CLICK_HERE":"Click here",
+  "TO_RESET_YOUR_PASSWORD":"To reset your password .",
+  "LOGIN_TO_YOUR_ACCOUNT":"Login to your account",
+  "STAY_SIGNED_IN":"Stay signed in"
 }

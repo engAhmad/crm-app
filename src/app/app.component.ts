@@ -7,13 +7,9 @@ import {Http, URLSearchParams} from '@angular/http';
 })
 
 export class AppComponent {
-    constructor(translate: TranslateService, private _http: Http) {
+    constructor(translate: TranslateService) {
         translate.setDefaultLang('en');
         translate.use('ar');
-    }
-
-    startHttpRequest() {
-        this._http.get('/app/heroes/?name=^j');
     }
 }
 

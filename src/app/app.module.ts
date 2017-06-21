@@ -19,6 +19,7 @@ import {DealsComponent} from './deals/deals.component';
 import {ReportsComponent} from './reports/reports.component';
 import {ActivitiesComponent} from './activities/activities.component';
 import {LoginComponent} from './auth/login/login.component';
+import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.component';
 // template
 import {HeaderComponent} from './layout/header/header.component';
 import {TopbarComponent} from './layout/topbar/topbar.component';
@@ -29,6 +30,7 @@ import {BreadcrumbsComponent} from './layout/breadcrumbs/breadcrumbs.component';
 import {AuthGuard} from './_guards/index';
 import {AlertComponent} from './_directives/index';
 import {AlertService, AuthenticationService, UserService} from './_services/index';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
@@ -37,6 +39,7 @@ export function HttpLoaderFactory(http: Http) {
 @NgModule({
     declarations: [
         LoginComponent,
+        ForgotPasswordComponent,
         AppComponent,
         HeaderComponent,
         HomeComponent,
@@ -51,7 +54,8 @@ export function HttpLoaderFactory(http: Http) {
         BreadcrumbsComponent,
         ReportsComponent,
         ActivitiesComponent,
-        AlertComponent
+        AlertComponent,
+
     ],
     imports: [
         BrowserModule, FormsModule, AppRoutingModule, HttpModule, TranslateModule.forRoot({
@@ -67,11 +71,7 @@ export function HttpLoaderFactory(http: Http) {
         AuthGuard,
         AlertService,
         AuthenticationService,
-        UserService,
-        // providers used to create fake backend
-        // fakeBackendProvider,
-        // MockBackend,
-        // BaseRequestOptions
+        UserService
     ],
     bootstrap: [AppComponent]
 })
