@@ -14,6 +14,9 @@ import {FeedsComponent} from './feeds/feeds.component';
 import {LeadsComponent} from './leads/leads.component';
 import {AccountsComponent} from './accounts/accounts.component';
 import {ContactsComponent} from './contacts/contacts.component';
+import {DealsComponent} from './deals/deals.component';
+import { ReportsComponent } from './reports/reports.component';
+import { ActivitiesComponent } from './activities/activities.component';
 import {LoginComponent} from './auth/login/login.component';
 // template
 import {HeaderComponent} from './layout/header/header.component';
@@ -23,6 +26,7 @@ import {FooterComponent} from './layout/footer/footer.component';
 import {BreadcrumbsComponent} from './layout/breadcrumbs/breadcrumbs.component';
 //services
 import {AuthService} from "./services/auth.service";
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
@@ -38,10 +42,13 @@ export function HttpLoaderFactory(http: Http) {
         LeadsComponent,
         AccountsComponent,
         ContactsComponent,
+        DealsComponent,
         TopbarComponent,
         NavbarComponent,
         FooterComponent,
-        BreadcrumbsComponent
+        BreadcrumbsComponent,
+        ReportsComponent,
+        ActivitiesComponent
     ],
     imports: [
         BrowserModule, FormsModule, AppRoutingModule, HttpModule, TranslateModule.forRoot({
