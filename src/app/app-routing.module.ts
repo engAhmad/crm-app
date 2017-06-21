@@ -9,18 +9,20 @@ import {DealsComponent} from './deals/deals.component';
 import {LoginComponent} from "./auth/login/login.component";
 import {ReportsComponent} from './reports/reports.component';
 import {ActivitiesComponent} from './activities/activities.component';
+import {AuthGuard} from './_guards/index';
 
 const appRoutes: Routes = [
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
-    {path: 'home', component: HomeComponent},
-    {path: 'feeds', component: FeedsComponent},
-    {path: 'leads', component: LeadsComponent},
-    {path: 'accounts', component: AccountsComponent},
-    {path: 'contacts', component: ContactsComponent},
-    {path: 'deals', component: DealsComponent},
-    {path: 'reports', component: ReportsComponent},
-    {path: 'activities', component: ActivitiesComponent},
+    {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+    {path: 'feeds', component: FeedsComponent, canActivate: [AuthGuard]},
+    {path: 'leads', component: LeadsComponent, canActivate: [AuthGuard]},
+    {path: 'accounts', component: AccountsComponent, canActivate: [AuthGuard]},
+    {path: 'contacts', component: ContactsComponent, canActivate: [AuthGuard]},
+    {path: 'deals', component: DealsComponent, canActivate: [AuthGuard]},
+    {path: 'reports', component: ReportsComponent, canActivate: [AuthGuard]},
+    {path: 'activities', component: ActivitiesComponent, canActivate: [AuthGuard]},
+    // otherwise redirect to home
+    {path: '**', redirectTo: ''}
 ];
 @NgModule({
     imports: [

@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule, Http} from '@angular/http';
 // Loading bar
 import {NgLoadingBarModule} from 'ng-loading-bar';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 // translating
 import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
@@ -26,8 +25,10 @@ import {TopbarComponent} from './layout/topbar/topbar.component';
 import {NavbarComponent} from './layout/navbar/navbar.component';
 import {FooterComponent} from './layout/footer/footer.component';
 import {BreadcrumbsComponent} from './layout/breadcrumbs/breadcrumbs.component';
-//services
-import {AuthService} from "./services/auth.service";
+//guards
+import {AuthGuard} from './_guards/index';
+import {AlertComponent} from './_directives/index';
+import {AlertService, AuthenticationService, UserService} from './_services/index';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
@@ -49,7 +50,8 @@ export function HttpLoaderFactory(http: Http) {
         FooterComponent,
         BreadcrumbsComponent,
         ReportsComponent,
-        ActivitiesComponent
+        ActivitiesComponent,
+        AlertComponent
     ],
     imports: [
         BrowserModule, FormsModule, AppRoutingModule, HttpModule, TranslateModule.forRoot({
@@ -61,7 +63,16 @@ export function HttpLoaderFactory(http: Http) {
         }),
         NgLoadingBarModule.forRoot(),
     ],
-    providers: [AuthService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+    providers: [
+        AuthGuard,
+        AlertService,
+        AuthenticationService,
+        UserService,
+        // providers used to create fake backend
+        // fakeBackendProvider,
+        // MockBackend,
+        // BaseRequestOptions
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
