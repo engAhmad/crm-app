@@ -1,20 +1,21 @@
-import {Component, OnInit} from "@angular/core";
+import {Component} from "@angular/core";
 import {TranslateService} from "@ngx-translate/core";
+import {Title} from "@angular/platform-browser";
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
-    public appTitle: string;
+export class AppComponent {
 
-    constructor(public translate: TranslateService) {
+    constructor(private translate: TranslateService, title: Title) {
         translate.setDefaultLang('en');
         translate.use('ar');
+        this.setAppTitle(title);
     }
 
-    public ngOnInit() {
-        this.translate.get('APP_TITLE').subscribe((title: string) => {
-            this.appTitle = title;
+    public  setAppTitle(title: Title) {
+        return this.translate.get('APP_TITLE').subscribe((res: string) => {
+            title.setTitle(res);
         });
     }
 }
