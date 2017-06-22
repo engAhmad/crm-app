@@ -1,12 +1,11 @@
+<!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
-    <div class="container">
-        <h1 class="pull-left">
-            <div [translate]="'HOME'"></div>
-        </h1>
+    <div class="container" *ngFor="let breadcrumb of breadcrumbs">
+        <h1 class="pull-left">{{breadcrumb.label}}</h1>
         <ul class="pull-right breadcrumb">
-            <li><a href="/"><span [translate]="'HOME'"></span></a></li>
-            <!--<li><a href="">Pages</a></li>-->
-            <!--<li class="active">Blank Page</li>-->
+            <li>
+                <a [routerLink]="breadcrumb.url">{{breadcrumb.label}}</a>
+            </li>
         </ul>
     </div><!--/container-->
-</div>
+</div><!--/breadcrumbs-->
