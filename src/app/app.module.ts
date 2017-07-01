@@ -26,51 +26,53 @@ import {AuthGuard} from "./_guards/index";
 import {AlertComponent} from "./_directives/index";
 import {AlertService, AuthenticationService, UserService} from "./_services/index";
 import {AppState} from "./app.service";
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-    declarations: [
-        LoginComponent,
-        ForgotPasswordComponent,
-        AppComponent,
-        HeaderComponent,
-        HomeComponent,
-        FeedsComponent,
-        LeadsComponent,
-        AccountsComponent,
-        ContactsComponent,
-        DealsComponent,
-        TopbarComponent,
-        NavbarComponent,
-        FooterComponent,
-        BreadcrumbsComponent,
-        ReportsComponent,
-        ActivitiesComponent,
-        AlertComponent,
+  declarations: [
+    LoginComponent,
+    ForgotPasswordComponent,
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    FeedsComponent,
+    LeadsComponent,
+    AccountsComponent,
+    ContactsComponent,
+    DealsComponent,
+    TopbarComponent,
+    NavbarComponent,
+    FooterComponent,
+    BreadcrumbsComponent,
+    ReportsComponent,
+    ActivitiesComponent,
+    AlertComponent,
 
-    ],
-    imports: [
-        BrowserModule, FormsModule, AppRoutingModule, HttpModule, TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [Http]
-            }
-        }),
-        NgLoadingBarModule.forRoot(),
-    ],
-    providers: [
-        Title,
-        AuthGuard,
-        AlertService,
-        AuthenticationService,
-        UserService,
-        AppState
-    ],
-    bootstrap: [AppComponent]
+  ],
+  imports: [
+    BrowserModule, FormsModule, AppRoutingModule, HttpModule, TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [Http]
+      }
+    }),
+    NgLoadingBarModule.forRoot(),
+  ],
+  providers: [
+    Title,
+    AuthGuard,
+    AlertService,
+    AuthenticationService,
+    UserService,
+    AppState,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
